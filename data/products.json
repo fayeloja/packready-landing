@@ -1,0 +1,62 @@
+[
+  {
+    "id": "1",
+    "name": "Disposable Plates",
+    "category": "Plates & Bowls",
+    "description": "Sturdy disposable plates suitable for parties, events, and food businesses. Available in small and large sizes.",
+    "unit": "50-pack",
+    "price": 1800,
+    "emoji": "🍽️",
+    "badge": "Bestseller"
+  },
+  {
+    "id": "2",
+    "name": "Takeaway Food Containers",
+    "category": "Containers",
+    "description": "Leak-proof containers for takeaway meals. Ideal for restaurants, canteens, and food vendors.",
+    "unit": "20-pack",
+    "price": 2400,
+    "emoji": "🥡",
+    "badge": "Popular"
+  },
+  {
+    "id": "3",
+    "name": "Plastic Cups",
+    "category": "Cups & Drinks",
+    "description": "Clear disposable cups for water, juice, and soft drinks. Perfect for events and daily use.",
+    "unit": "100-pack",
+    "price": 1500,
+    "emoji": "🥤",
+    "badge": null
+  },
+  {
+    "id": "4",
+    "name": "Serving Trays",
+    "category": "Trays",
+    "description": "Large serving trays for buffets, weddings, and corporate events. Lightweight and durable.",
+    "unit": "10-pack",
+    "price": 3200,
+    "emoji": "🫙",
+    "badge": "Event Pick"
+  },
+  {
+    "id": "5",
+    "name": "Napkins & Serviettes",
+    "category": "Table Essentials",
+    "description": "Soft 2-ply serviettes for table settings. Available in white and assorted colours.",
+    "unit": "200-pack",
+    "price": 1200,
+    "emoji": "🧻",
+    "badge": null
+  },
+  {
+    "id": "6",
+    "name": "Nylon Takeaway Bags",
+    "category": "Packaging",
+    "description": "Printed nylon bags for takeaway orders. Keeps food secure and presents your brand well.",
+    "unit": "100-pack",
+    "price": 2000,
+    "emoji": "🛍️",
+    "badge": "New"
+  }
+]

@@ -42,7 +42,23 @@ public/                             Static assets
 npm install
 ```
 
-### 2. Start the development server
+### 2. Configure environment variables
+
+Copy `.env.example` to `.env.local`.
+
+PowerShell:
+
+```bash
+Copy-Item .env.example .env.local
+```
+
+Required variables:
+
+- `RESEND_API_KEY` - your Resend API key
+- `RESEND_FROM_EMAIL` - a verified sender, for example `PackReady <sales@yourdomain.com>`
+- `RESEND_TO_EMAIL` - the inbox that should receive quote requests
+
+### 3. Start the development server
 
 ```bash
 npm run dev
@@ -99,15 +115,9 @@ Current API behavior:
 
 - Validates `name`, `phone`, and `message`
 - Returns `400` if required fields are missing
-- Logs the request on the server
-- Returns a success response without storing or forwarding the request
-
-This route is still a stub. For production, wire it to one of the integrations already noted in the file:
-
-- WhatsApp Business or Twilio
-- Email delivery such as Resend or Nodemailer
-- A database
-- Google Sheets or another back-office workflow
+- Returns `503` if Resend environment variables are missing
+- Sends an email through the Resend API
+- Returns `502` if Resend rejects the request or delivery setup is invalid
 
 ## Branding and customization
 
@@ -136,6 +146,12 @@ There are placeholder business details still present in the UI:
 - The WhatsApp CTA currently points to `https://wa.me/234869775830`
 
 Before deployment, make sure those values match the real business contact channels.
+
+Resend-specific production checks:
+
+- Verify the sending domain or sender address in Resend
+- Replace the sample `RESEND_FROM_EMAIL` in `.env.example`
+- Set the real `RESEND_TO_EMAIL` inbox in your deployment platform
 
 ## Linting
 
@@ -188,4 +204,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Contact
 
 Fatai Ayeloja (@fayeloja)
-
